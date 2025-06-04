@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux"
 import CartItem from "./CartItem"
-import { clearCart } from "../features/cartSlice"
+import { clearCart } from "../features/cart/cartSlice"
 
 function CartContainer() {
   const dispatch = useDispatch()
@@ -30,7 +30,7 @@ function CartContainer() {
         <hr />
         <div className='cart-total'>
           <h4>
-            total <span>${total}</span>
+            total <span>${total.toFixed(2)}</span>
           </h4>
           <button
             className='btn clear-btn'
